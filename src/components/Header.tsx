@@ -220,6 +220,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onNavigate, user, onAuth
             </div>
           </div>
         </div>
+      </div>
       </header>
 
       {/* Mobile Menu Overlay */}
