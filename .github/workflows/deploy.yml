@@ -25,14 +25,16 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Authenticate with GitHub CLI
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          echo "${GITHUB_TOKEN}" | gh auth login --with-token
+      - name: Configure Pages
+        uses: actions/configure-pages@v4
 
-      - name: Deploy to GitHub Pages
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          gh pages publish dist --branch gh-pages --repo ${{ github.repository }} --message "Deploy from GitHub Actions"
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: dist
+
+      - name: Deploy Pages
+        uses: actions/deploy-pages@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
