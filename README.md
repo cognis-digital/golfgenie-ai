@@ -52,3 +52,9 @@ This is a Vite front-end; the lifecycle uses the npm scripts defined in
    ```
 
 Licensed under the Cognis Open Collaboration License (COCL) 1.0 — see [LICENSE](LICENSE).
+
+## Interoperability
+
+`{}` composes with the 300+ tool Cognis suite — JSON in/out and a shared
+OpenAI-compatible `/v1` backbone. See **[INTEROP.md](INTEROP.md)** for the
+suite map, composition patterns, and reference stacks.
