@@ -4,6 +4,35 @@ GolfGenie is a Vite + React + TypeScript web application (with a Supabase
 backend) in the Cognis Digital suite. It uses Tailwind CSS for styling, Redux
 Toolkit for state, and integrates Supabase, OpenAI, Google Maps, and Stripe.
 
+
+<!-- cognis:example:start -->
+## 🔎 Example output
+
+**Sample result format** _(illustrative values — run on your own data for real findings):_
+
+```
+{
+  "rounds": [
+    {
+      "date": "2023-02-15",
+      "course": "Pebble Beach",
+      "score": 85,
+      "par": 72,
+      "handicap_index": 12.5
+    },
+    {
+      "date": "2023-03-01",
+      "course": "St Andrews",
+      "score": 78,
+      "par": 70,
+      "handicap_index": 11.2
+    }
+  ]
+}
+```
+
+<!-- cognis:example:end -->
+
 ## Usage — step by step
 
 This is a Vite front-end; the lifecycle uses the npm scripts defined in
